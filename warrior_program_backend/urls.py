@@ -22,6 +22,7 @@ from rest_framework_nested import routers
 from user_and_role.views import CurrentUserView
 from target.views import TargetView
 from factor.views import SharedL1FactorView, PrivateL1FactorView, L2FactorView
+from teacher import urls as teacher_urls
 
 router = routers.DefaultRouter()
 router.register('users', CurrentUserView)
@@ -43,4 +44,5 @@ urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^api/', include(shared_l1_router.urls)),
     url(r'^api/', include(private_l1_router.urls)),
+    url(r'^teacher/', include(teacher_urls)),
 ]

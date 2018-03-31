@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.db import models
+from school.models import School
 
 
 class AdminManager(models.Manager):
@@ -53,3 +54,6 @@ class User(AbstractUser):
 
     def is_reviewer(self):
         return not self.is_superuser and self.role == self.REVIEWER
+
+
+

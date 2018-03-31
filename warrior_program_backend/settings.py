@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'target.apps.TargetConfig',
     'factor.apps.FactorConfig',
     'evalutaion.apps.EvalutaionConfig',
+    'school.apps.SchoolConfig',
+    'student.apps.StudentConfig',
+    'teacher.apps.TeacherConfig',
 ]
 
 MIDDLEWARE = [
