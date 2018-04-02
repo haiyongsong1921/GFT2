@@ -10,5 +10,6 @@ class Student(models.Model):
     realName = models.CharField(max_length=20)
     password = models.CharField(max_length=256)
     phone = models.CharField(max_length=20)
+    email = models.EmailField(blank=True)
     description = models.TextField()
     #user = models.ManyToManyField('User', blank=True)

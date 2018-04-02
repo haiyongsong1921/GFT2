@@ -10,6 +10,7 @@ class TeacherManager(models.Manager):
 
     def query_by_column(self, column_id):
         query = self.get_queryset().filter(column_id=column_id)
+        return query
 
     def query_by_school(self, school_id):
         # school = School.objects.get(id=school_id)
@@ -26,6 +27,7 @@ class Teacher(models.Model):
     password = models.CharField(max_length=256)
     phone = models.CharField(max_length=20)
     nickName = models.CharField(max_length=20)
+    email = models.EmailField(blank=True)
     description = models.TextField()
     student = models.ManyToManyField(Student)
     # user = models.ManyToManyField('User', blank=True)

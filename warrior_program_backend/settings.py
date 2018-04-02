@@ -61,6 +61,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'warrior_program_backend.urls'
 AUTH_USER_MODEL = 'user_and_role.User'
+LOGIN_URL = "/teacher/login/?next='school_id'"
 CORS_ORIGIN_ALLOW_ALL = True
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
